@@ -3,9 +3,10 @@ name: 宜昌市信用数据自动采集
 on:
   schedule:
     - cron: '0 21 * * *'  # 每天UTC时间20:00运行（北京时间次日04:00）
+    
   pull_request:
     branches: [ "main" ]
-    
+
 permissions:
   contents: write
 
