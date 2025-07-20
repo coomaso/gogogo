@@ -171,7 +171,7 @@ def fetch_company_detail(session: requests.Session, cec_id: str, company_name: s
                 print("信誉分明细接口返回空数据")
                 last_error = "接口返回空数据"
                 continue
-
+            parse_response_data(encrypted_data)
             decrypted_str = aes_decrypt_base64(encrypted_data)
             detail_data = json.loads(decrypted_str)
 
